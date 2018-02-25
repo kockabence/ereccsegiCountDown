@@ -1,0 +1,22 @@
+<p id="countdown"></p>
+
+<script>
+    var endTime = new Date("May 7, 2018 08:00:00").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var remaining = endTime - now;
+
+        var days = Math.floor(remaining / (1000*60*60*24));
+        var hours = Math.floor((remaining % (1000*60*60*24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
+
+        if (remaining < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "ERECCSEGI";
+
+        }
+    }, 1000);
+</script>
