@@ -24,7 +24,7 @@ p {
         var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
 
-        document.getElementById("countdown").innerHTML ="Az érettségi szezon elkezdéséig hátra van még: days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
+        document.getElementById("countdown").innerHTML ="Az érettségi szezon elkezdéséig hátra van még: " days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
 
         if (remaining < 0) {
             clearInterval(x);
